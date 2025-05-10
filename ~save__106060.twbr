@@ -1,0 +1,700 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0415.1018                               -->
+<workbook original-version='18.1' source-build='2025.1.1 (20251.25.0415.1018)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='FactClassSchedule+ (ClassSchedule)' inline='true' name='federated.0cmixn602at2v51bnkiis07kd0nk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='BigQuery' name='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k'>
+            <connection CATALOG='ass4-245492' EXECCATALOG='ass4-245492' authentication='oauth' class='bigquery' connection-dialect='google-sql' project='Ass4-245492' schema='ClassSchedule' server-oauth='' username='napat.thai@dome.tu.ac.th' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='FactClassSchedule' table='[ass4-245492.ClassSchedule].[FactClassSchedule]' type='table' />
+          <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='DimBuildings' table='[ass4-245492.ClassSchedule].[DimBuildings]' type='table' />
+          <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='DimCourses' table='[ass4-245492.ClassSchedule].[DimCourses]' type='table' />
+          <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='DimDate' table='[ass4-245492.ClassSchedule].[DimDate]' type='table' />
+          <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='DimInstructors' table='[ass4-245492.ClassSchedule].[DimInstructors]' type='table' />
+        </relation>
+        <cols>
+          <map key='[BuildingID (DimBuildings)]' value='[DimBuildings].[BuildingID]' />
+          <map key='[BuildingID]' value='[FactClassSchedule].[BuildingID]' />
+          <map key='[Building]' value='[DimBuildings].[Building]' />
+          <map key='[CourseID (DimCourses)]' value='[DimCourses].[CourseID]' />
+          <map key='[CourseID]' value='[FactClassSchedule].[CourseID]' />
+          <map key='[Credit Hours]' value='[DimCourses].[Credit Hours]' />
+          <map key='[DateID]' value='[DimDate].[DateID]' />
+          <map key='[Days of Week]' value='[FactClassSchedule].[Days of Week]' />
+          <map key='[Degree Attributes]' value='[DimCourses].[Degree Attributes]' />
+          <map key='[Description]' value='[DimCourses].[Description]' />
+          <map key='[End Time]' value='[FactClassSchedule].[End Time]' />
+          <map key='[InstructorID (DimInstructors)]' value='[DimInstructors].[InstructorID]' />
+          <map key='[InstructorID]' value='[FactClassSchedule].[InstructorID]' />
+          <map key='[InstructorName]' value='[DimInstructors].[InstructorName]' />
+          <map key='[Name]' value='[DimCourses].[Name]' />
+          <map key='[Number]' value='[DimCourses].[Number]' />
+          <map key='[Room]' value='[FactClassSchedule].[Room]' />
+          <map key='[Section]' value='[FactClassSchedule].[Section]' />
+          <map key='[Start Time]' value='[FactClassSchedule].[Start Time]' />
+          <map key='[Subject]' value='[DimCourses].[Subject]' />
+          <map key='[Term]' value='[DimDate].[Term]' />
+          <map key='[Type]' value='[FactClassSchedule].[Type]' />
+          <map key='[YearTerm]' value='[FactClassSchedule].[YearTerm]' />
+          <map key='[Year]' value='[DimDate].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>YearTerm</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[YearTerm]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>YearTerm</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CourseID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CourseID]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>CourseID</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>InstructorID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[InstructorID]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>InstructorID</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Section</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Section]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>Section</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BuildingID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[BuildingID]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>BuildingID</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Room</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Room]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>Room</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days of Week</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Days of Week]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>Days of Week</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Time</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Start Time]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>Start Time</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Time</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[End Time]</local-name>
+            <parent-name>[FactClassSchedule]</parent-name>
+            <remote-alias>End Time</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BuildingID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[BuildingID (DimBuildings)]</local-name>
+            <parent-name>[DimBuildings]</parent-name>
+            <remote-alias>BuildingID</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimBuildings_731A42EDEC4F48C5AA8C044C4FB11919]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Building</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Building]</local-name>
+            <parent-name>[DimBuildings]</parent-name>
+            <remote-alias>Building</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimBuildings_731A42EDEC4F48C5AA8C044C4FB11919]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CourseID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[CourseID (DimCourses)]</local-name>
+            <parent-name>[DimCourses]</parent-name>
+            <remote-alias>CourseID</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimCourses_C5D211FDC3B64BA5AC4EC1D658954881]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subject</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Subject]</local-name>
+            <parent-name>[DimCourses]</parent-name>
+            <remote-alias>Subject</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimCourses_C5D211FDC3B64BA5AC4EC1D658954881]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number]</local-name>
+            <parent-name>[DimCourses]</parent-name>
+            <remote-alias>Number</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimCourses_C5D211FDC3B64BA5AC4EC1D658954881]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[DimCourses]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimCourses_C5D211FDC3B64BA5AC4EC1D658954881]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[DimCourses]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimCourses_C5D211FDC3B64BA5AC4EC1D658954881]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Credit Hours</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Credit Hours]</local-name>
+            <parent-name>[DimCourses]</parent-name>
+            <remote-alias>Credit Hours</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimCourses_C5D211FDC3B64BA5AC4EC1D658954881]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Degree Attributes</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Degree Attributes]</local-name>
+            <parent-name>[DimCourses]</parent-name>
+            <remote-alias>Degree Attributes</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimCourses_C5D211FDC3B64BA5AC4EC1D658954881]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DateID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[DateID]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>DateID</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimDate_29CF007D3B83475A8B263CFB04855FDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimDate_29CF007D3B83475A8B263CFB04855FDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Term</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Term]</local-name>
+            <parent-name>[DimDate]</parent-name>
+            <remote-alias>Term</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimDate_29CF007D3B83475A8B263CFB04855FDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>InstructorID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[InstructorID (DimInstructors)]</local-name>
+            <parent-name>[DimInstructors]</parent-name>
+            <remote-alias>InstructorID</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimInstructors_74C490BEC1C9497BA9F7B4A50F97F000]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>InstructorName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[InstructorName]</local-name>
+            <parent-name>[DimInstructors]</parent-name>
+            <remote-alias>InstructorName</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[DimInstructors_74C490BEC1C9497BA9F7B4A50F97F000]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Building ID' datatype='string' name='[BuildingID]' role='dimension' type='nominal' />
+      <column caption='Course ID' datatype='string' name='[CourseID]' role='dimension' type='nominal' />
+      <column caption='Date ID' datatype='string' name='[DateID]' role='dimension' type='nominal' />
+      <column caption='Instructor ID' datatype='string' name='[InstructorID]' role='dimension' type='nominal' />
+      <column caption='Instructor Name' datatype='string' name='[InstructorName]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number]' role='dimension' type='ordinal' />
+      <column caption='Year Term' datatype='string' name='[YearTerm]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='DimBuildings' datatype='table' name='[__tableau_internal_object_id__].[DimBuildings_731A42EDEC4F48C5AA8C044C4FB11919]' role='measure' type='quantitative' />
+      <column caption='DimCourses' datatype='table' name='[__tableau_internal_object_id__].[DimCourses_C5D211FDC3B64BA5AC4EC1D658954881]' role='measure' type='quantitative' />
+      <column caption='DimDate' datatype='table' name='[__tableau_internal_object_id__].[DimDate_29CF007D3B83475A8B263CFB04855FDE]' role='measure' type='quantitative' />
+      <column caption='DimInstructors' datatype='table' name='[__tableau_internal_object_id__].[DimInstructors_74C490BEC1C9497BA9F7B4A50F97F000]' role='measure' type='quantitative' />
+      <column caption='FactClassSchedule' datatype='table' name='[__tableau_internal_object_id__].[FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6]' role='measure' type='quantitative' />
+      <column-instance column='[DateID]' derivation='None' name='[none:DateID:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:DateID:nk]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>&quot;2019-fa&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;2020-sp&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Thailand&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='DimBuildings' id='DimBuildings_731A42EDEC4F48C5AA8C044C4FB11919'>
+            <properties context=''>
+              <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='DimBuildings' table='[ass4-245492.ClassSchedule].[DimBuildings]' type='table' />
+            </properties>
+          </object>
+          <object caption='DimCourses' id='DimCourses_C5D211FDC3B64BA5AC4EC1D658954881'>
+            <properties context=''>
+              <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='DimCourses' table='[ass4-245492.ClassSchedule].[DimCourses]' type='table' />
+            </properties>
+          </object>
+          <object caption='DimDate' id='DimDate_29CF007D3B83475A8B263CFB04855FDE'>
+            <properties context=''>
+              <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='DimDate' table='[ass4-245492.ClassSchedule].[DimDate]' type='table' />
+            </properties>
+          </object>
+          <object caption='DimInstructors' id='DimInstructors_74C490BEC1C9497BA9F7B4A50F97F000'>
+            <properties context=''>
+              <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='DimInstructors' table='[ass4-245492.ClassSchedule].[DimInstructors]' type='table' />
+            </properties>
+          </object>
+          <object caption='FactClassSchedule' id='FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6'>
+            <properties context=''>
+              <relation connection='bigquery.0e8l0jn1os7cou16ht17b1pq3u7k' name='FactClassSchedule' table='[ass4-245492.ClassSchedule].[FactClassSchedule]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[BuildingID]' />
+              <expression op='[BuildingID (DimBuildings)]' />
+            </expression>
+            <first-end-point object-id='FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6' />
+            <second-end-point object-id='DimBuildings_731A42EDEC4F48C5AA8C044C4FB11919' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[CourseID]' />
+              <expression op='[CourseID (DimCourses)]' />
+            </expression>
+            <first-end-point object-id='FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6' />
+            <second-end-point object-id='DimCourses_C5D211FDC3B64BA5AC4EC1D658954881' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[YearTerm]' />
+              <expression op='[DateID]' />
+            </expression>
+            <first-end-point object-id='FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6' />
+            <second-end-point object-id='DimDate_29CF007D3B83475A8B263CFB04855FDE' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[InstructorID]' />
+              <expression op='[InstructorID (DimInstructors)]' />
+            </expression>
+            <first-end-point object-id='FactClassSchedule_B546DC88B2B5471DB57EA22F10C461E6' />
+            <second-end-point object-id='DimInstructors_74C490BEC1C9497BA9F7B4A50F97F000' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FactClassSchedule+ (ClassSchedule)' name='federated.0cmixn602at2v51bnkiis07kd0nk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cmixn602at2v51bnkiis07kd0nk'>
+            <column caption='Course ID' datatype='string' name='[CourseID]' role='dimension' type='nominal' />
+            <column caption='Date ID' datatype='string' name='[DateID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Section]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Subject]' role='dimension' type='nominal' />
+            <column-instance column='[Section]' derivation='Count' name='[cnt:Section:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CourseID]' derivation='None' name='[none:CourseID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[DateID]' derivation='None' name='[none:DateID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Subject]' derivation='None' name='[none:Subject:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:CourseID:nk]' direction='DESC' using='[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:Section:qk]' />
+          <filter class='categorical' column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:DateID:nk]'>
+            <groupfilter function='member' level='[none:DateID:nk]' member='&quot;2020-sp&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:Subject:nk]'>
+            <groupfilter function='member' level='[none:Subject:nk]' member='&quot;CS&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0cmixn602at2v51bnkiis07kd0nk].[none:Subject:nk]</column>
+            <column>[federated.0cmixn602at2v51bnkiis07kd0nk].[none:DateID:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:Section:qk]' field-type='quantitative' max='29' min='0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0cmixn602at2v51bnkiis07kd0nk].[none:DateID:nk] / ([federated.0cmixn602at2v51bnkiis07kd0nk].[none:Subject:nk] / [federated.0cmixn602at2v51bnkiis07kd0nk].[none:CourseID:nk]))</rows>
+        <cols>[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:Section:qk]</cols>
+      </table>
+      <simple-id uuid='{9213D0AB-FCF1-4D92-8D17-61A02F83BEDC}' />
+    </worksheet>
+    <worksheet name='3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FactClassSchedule+ (ClassSchedule)' name='federated.0cmixn602at2v51bnkiis07kd0nk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cmixn602at2v51bnkiis07kd0nk'>
+            <column caption='Course ID' datatype='string' name='[CourseID]' role='dimension' type='nominal' />
+            <column caption='Date ID' datatype='string' name='[DateID]' role='dimension' type='nominal' />
+            <column caption='Instructor Name' datatype='string' name='[InstructorName]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Subject]' role='dimension' type='nominal' />
+            <column-instance column='[CourseID]' derivation='Count' name='[cnt:CourseID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DateID]' derivation='None' name='[none:DateID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[InstructorName]' derivation='None' name='[none:InstructorName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Subject]' derivation='None' name='[none:Subject:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:InstructorName:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:InstructorName:nk]' />
+              <groupfilter function='member' level='[none:InstructorName:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:InstructorName:nk]' direction='DESC' using='[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:CourseID:qk]' />
+          <filter class='categorical' column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:Subject:nk]'>
+            <groupfilter function='member' level='[none:Subject:nk]' member='&quot;CS&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0cmixn602at2v51bnkiis07kd0nk].[none:Subject:nk]</column>
+            <column>[federated.0cmixn602at2v51bnkiis07kd0nk].[none:InstructorName:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:CourseID:qk]' field-type='quantitative' max='67' min='-4' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:CourseID:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:DateID:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0cmixn602at2v51bnkiis07kd0nk].[none:InstructorName:nk]</rows>
+        <cols>[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:CourseID:qk]</cols>
+      </table>
+      <simple-id uuid='{4F56936C-37EC-4011-A357-3FB52ABE9295}' />
+    </worksheet>
+    <worksheet name='4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FactClassSchedule+ (ClassSchedule)' name='federated.0cmixn602at2v51bnkiis07kd0nk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cmixn602at2v51bnkiis07kd0nk'>
+            <column datatype='string' name='[Building]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Subject]' role='dimension' type='nominal' />
+            <column-instance column='[Subject]' derivation='Count' name='[cnt:Subject:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Building]' derivation='None' name='[none:Building:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Subject]' derivation='None' name='[none:Subject:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:Building:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Building:nk]' />
+              <groupfilter function='member' level='[none:Building:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <natural-sort column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:Building:nk]' direction='ASC' />
+          <computed-sort column='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:Subject:nk]' direction='DESC' using='[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:Subject:qk]' />
+          <slices>
+            <column>[federated.0cmixn602at2v51bnkiis07kd0nk].[none:Building:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:Subject:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0cmixn602at2v51bnkiis07kd0nk].[none:Building:nk] / [federated.0cmixn602at2v51bnkiis07kd0nk].[none:Subject:nk])</rows>
+        <cols>[federated.0cmixn602at2v51bnkiis07kd0nk].[cnt:Subject:qk]</cols>
+      </table>
+      <simple-id uuid='{F6B32C99-C58A-48C6-BE19-CB3F1846738B}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{031C7C7F-8BDE-4638-8560-967D1E32E7D9}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='44'>
+    <window class='worksheet' name='2'>
+      <cards>
+        <edge name='left'>
+          <strip size='170'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='24'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B00D500A-A911-4B08-A5CA-370BC2E152C7}' />
+    </window>
+    <window class='worksheet' maximized='true' name='4'>
+      <cards>
+        <edge name='left'>
+          <strip size='132'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='24'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4F621024-20F4-48E9-A2DB-F81323ADD7D5}' />
+    </window>
+    <window class='worksheet' name='3'>
+      <cards>
+        <edge name='left'>
+          <strip size='132'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='24'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0cmixn602at2v51bnkiis07kd0nk].[none:DateID:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C7879197-8353-47DE-AFA1-9830D73CFEC3}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4DA82EF6-16EC-418D-93AC-1CD6AA8B2700}' />
+    </window>
+  </windows>
+</workbook>
